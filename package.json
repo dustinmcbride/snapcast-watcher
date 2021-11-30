@@ -1,0 +1,22 @@
+{
+  "name": "snapcast-watcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon src/index",
+    "cp": "rsync -avz -e ssh --exclude node_modules . pi@192.168.0.55:/home/pi/node-services/snapcast-watcher"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.6",
+    "ws": "^8.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "jest": "^27.3.1"
+  }
+}

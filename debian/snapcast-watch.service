@@ -1,0 +1,14 @@
+# /lib/systemd/system/snapcast-watcher.service
+
+[Unit]
+Description=Snapcast Water Service
+After=network.target
+
+[Service]
+WorkingDirectory=/home/pi/node-services/snapcast-service
+ExecStart=/usr/local/bin/npm start
+Restart=on-failure
+User=pi
+
+[Install]
+WantedBy=multi-user.target
